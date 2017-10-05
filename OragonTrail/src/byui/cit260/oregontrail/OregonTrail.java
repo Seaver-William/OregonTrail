@@ -18,7 +18,13 @@ public class OregonTrail {
     
      public static void main(String[] args) {
          
-         Player player = new Player();
+         Player playerName = new Player();
+         
+         playerName.setName("Bill");
+         
+        String playerOneName = playerName.getName();
+       
+        System.out.println("Name = " + playerOneName);
      }
     
 }
