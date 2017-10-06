@@ -21,10 +21,32 @@ public class OregonTrail {
          Player playerName = new Player();
          
          playerName.setName("Bill");
+         playerName.setProfession("woodworker");
          
         String playerOneName = playerName.getName();
        
         System.out.println("Name = " + playerOneName);
+        
+        
+        //Test Classes Location and Stops
+        Location place = new Location();
+        
+        place.setMillageEnd(120);
+        place.setMillageStop(55.5);
+        place.setMillageTotal(170.5);
+        //This is a way to print the information that I sent to the Class Location.
+        System.out.println(place.toString());
+        
+        Stops stop = new Stops();
+        
+        stop.setObstacle("Wagon broke");
+        stop.setTown("Fort York");
+        stop.setLandMark("bbb");
+        stop.setTraidingPost("aaa");
+        //This is a way to print the information that I sent to the Class Stop.
+        System.out.println(stop.toString());        
+
+       
      }
     
 }
