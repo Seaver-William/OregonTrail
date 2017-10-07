@@ -17,6 +17,7 @@ public class Game  implements Serializable{
     private int totalTime;
     private int numPeople;
     private Player player;
+    private Location place;
     
     
     public Game() {
@@ -29,6 +30,16 @@ public class Game  implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
+
+    public Location getPlace() {
+        return place;
+    }
+
+    public void setPlace(Location place) {
+        this.place = place;
+    }
+    
+    
     
     
     public int getTotalTime() {
