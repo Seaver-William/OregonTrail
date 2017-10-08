@@ -18,9 +18,17 @@ public class Player implements Serializable{
     private String name;
     private String profession;
     private Game [] games = new Game[1];
-
+    private Actor [] actor = new Actor[4];
     public Player() {
     }
+
+    public Player(String profession) {
+        this.profession = profession;
+    }
+
+    
+    
+    
 
     public Game[] getGames() {
         return games;

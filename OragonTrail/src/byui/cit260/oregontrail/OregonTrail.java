@@ -27,6 +27,12 @@ public class OregonTrail {
        
         System.out.println("Name = " + playerOneName);
         
+         //Test class Actor
+         String name = Actor.Frank.getName();
+     
+        System.out.println(name.toString());
+        
+        
         
         //Test Classes Location and Stops
         Location place = new Location();
