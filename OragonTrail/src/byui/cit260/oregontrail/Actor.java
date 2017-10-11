@@ -17,39 +17,23 @@ public enum Actor {
     Jack("Jack");
     
     
-    private String Name;
+    private String name;
 
-    private Actor(String Name) {
-        this.Name = Name;
+    private Actor(String name) {
+        this.name = name;
+    }
+    
+    public String getname() {
+        return name;
     }
 
-    public static Actor getFrank() {
-        return Frank;
-    }
-
-    public static Actor getPatti() {
-        return Patti;
-    }
-
-    public static Actor getMartha() {
-        return Martha;
-    }
-
-    public static Actor getJoseph() {
-        return Joseph;
-    }
-
-    public static Actor getJack() {
-        return Jack;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
-        return "Actor{" + "Name=" + Name + '}';
+        return "Actor{" + "Name=" + name + '}';
     }
 
     

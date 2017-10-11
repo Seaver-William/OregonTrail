@@ -25,12 +25,11 @@ public class OregonTrail {
          
         String playerOneName = playerName.getName();
        
-        System.out.println("Name = " + playerOneName);
+        System.out.println(playerName.toString());
         
          //Test class Actor
-         String name = Actor.Frank.getName();
      
-        System.out.println(name.toString());
+        System.out.println(Actor.Frank.toString());
         
         
         
