@@ -29,7 +29,8 @@ public class OregonTrail {
         
          //Test class Actor
      
-        System.out.println(Actor.Frank.toString());
+        System.out.println(Actor.Patti.toString());
+        System.out.println(Actor.Jack.toString());
         
         
         
