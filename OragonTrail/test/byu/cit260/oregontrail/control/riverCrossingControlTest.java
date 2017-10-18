@@ -33,14 +33,14 @@ public class riverCrossingControlTest {
     @Test
     public void testDropSupplies() {
         System.out.println("dropSupplies");
-        double cartWeight = 250;
-        double suppliesDropped = 75;
+        double cartWeight = 395;
+        double suppliesDropped = 146;
         riverCrossingControl instance = new riverCrossingControl();
-        double expResult = -1;
+        double expResult = 249;
         double result = instance.dropSupplies(cartWeight, suppliesDropped);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
