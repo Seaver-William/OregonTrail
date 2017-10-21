@@ -11,4 +11,18 @@ package byu.cit260.oregontrail.control;
  */
 public class storeMenuControl {
     
+    public double sellSupplies(double currentSupplyWeight, double weightToSell){
+        
+        if (currentSupplyWeight < 0){
+            return -1;}
+        
+        if (currentSupplyWeight - weightToSell < 0){
+            return -1;}
+        
+        double newSupplyWeight = (currentSupplyWeight - weightToSell);
+        
+            return newSupplyWeight;
+        
+    }  
+    
 }
