@@ -32,6 +32,10 @@ public class storeMenuControlTest {
      */
     @Test
     public void testSellSupplies() {
+        
+        /**
+        *Test Case #1
+        **/
         System.out.println("sellSupplies");
         double currentSupplyWeight = 180;
         double weightToSell = 75;
