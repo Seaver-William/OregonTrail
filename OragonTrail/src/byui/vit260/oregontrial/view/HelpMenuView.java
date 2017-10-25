@@ -5,35 +5,30 @@
  */
 package byui.vit260.oregontrial.view;
 
-import byu.cit260.oregontrail.control.Gamecontrol;
-import byui.cit260.oregontrail.OregonTrail;
 import java.util.Scanner;
 
 /**
  *
  * @author Moose
  */
-public class MainMenuView {
-    private String menu;
-    
-    public MainMenuView(){
-        this.menu = "\n"
+class HelpMenuView {
+    private String helpMenu;
+public HelpMenuView(){
+        this.helpMenu = "\n"
                 +"\n------------------------------------"
-                +"\n| Main Menu                        |"
+                +"\n| Help Menu                        |"
                 +"\n------------------------------------"
-                +"\nN - Start new game"
-                +"\nG - Get and start saved game"
-                +"\nH - Get help on how to play the game"
-                +"\nS - Save game"
-                +"\nQ - Quit"
+                +"\nO - Game Objective"
+                +"\nM - How to move"
+                +"\nT - Tips"
+                +"\nR - Return"
                 +"\n------------------------------------";
     }
-   public void displayMainMenuView(){
-       
-       boolean done = false; // set the flag to done
+public void displayHelpMenuView(){
+    boolean done = false; // set the flag to done
        do{
            // prompt for and get players input
-           String menuOption = this.getMenuOption();
+           String menuOption = this.getMenuOption1();
            if (menuOption.toUpperCase().equals("Q"))//user wants to quit
                return; //exit the game
            
@@ -43,13 +38,14 @@ public class MainMenuView {
        } while (!done);
        }
 
-    private String getMenuOption() {
+    private String getMenuOption1() {
+        
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
         
         while (!valid) { //loop while an invalid value is entered
-            System.out.println("\n" + this.menu);
+            System.out.println("\n" + this.helpMenu);
             
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leadinga dn trailing blanks
@@ -64,22 +60,21 @@ public class MainMenuView {
            return value; //return the value entered
         }
 
-    public boolean doAction(String choice) {
-        
+    private boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
-            case "N": //creat and start new game
-                this.startNewGame();
+            case "O": //creat and start new game
+                this.gameObjective();
                 break;
-            case "G": //get and start and existing game
-                this.startExistingGame();
+            case "M": //get and start and existing game
+                this.howToMove();
                 break;
-            case "H": //display the help menu
-                this.displayHelpMenu();
+            case "T": //display the help menu
+                this.tips();
                 break;
-            case "S": //save the current game
-                this.saveGame();
+            case "R": //save the current game
+                this.returnTo();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -92,37 +87,26 @@ public class MainMenuView {
             
         }
 
-    private void startNewGame() {
-        Gamecontrol.createNewGame(OregonTrail.getPlayer());
-    
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    
+    private void gameObjective() {
+        System.out.println("\n*** gameObjective() *** Try again");
     }
 
-    private void startExistingGame() {
-       System.out.println("*** startExistingGame function called ***"); 
-    }
-        
-
-    
-    
-
-       
-    private void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
-        
-        helpMenuView.displayHelpMenuView();
+    private void howToMove() {
+        System.out.println("\n*** howToMove() *** Try again");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void tips() {
+        System.out.println("\n*** tips() *** Try again");
+    }
+
+    private void returnTo() {
+        System.out.println("\n*** returnTo() *** Try again");
     }
     }
-        
-    
+
+
+ 
     
 
-    
+
 

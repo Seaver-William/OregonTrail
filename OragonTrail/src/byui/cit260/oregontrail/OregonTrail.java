@@ -26,7 +26,7 @@ public class OregonTrail {
          StartProgramView startProgramView = new StartProgramView();
          startProgramView.displayStartProgramView();
 
-       
+         
      }
 
     public static Game getCurrentGame() {
