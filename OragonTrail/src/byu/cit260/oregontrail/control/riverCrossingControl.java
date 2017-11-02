@@ -5,11 +5,21 @@
  */
 package byu.cit260.oregontrail.control;
 
+import byui.cit260.oregontrail.Player;
+
 /**
  *
  * @author Moose
  */
 public class riverCrossingControl {
+
+    public static void totalCartWeight(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void viewSurroundings(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public double dropSupplies(double cartWeight, double suppliesDropped){
 
