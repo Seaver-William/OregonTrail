@@ -11,9 +11,13 @@ import java.util.Scanner;
  *
  * @author Moose
  */
-class HelpMenuView {
-    private String helpMenu;
-public HelpMenuView(){
+public class HelpMenuView {
+    public String helpMenu;
+
+    /**
+     *
+     */
+    public HelpMenuView(){
         this.helpMenu = "\n"
                 +"\n------------------------------------"
                 +"\n| Help Menu                        |"
@@ -29,8 +33,8 @@ public void displayHelpMenuView(){
        do{
            // prompt for and get players input
            String menuOption = this.getMenuOption1();
-           if (menuOption.toUpperCase().equals("Q"))//user wants to quit
-               return; //exit the game
+           if (menuOption.toUpperCase().equals("R"))//user wants to quit
+               return; //exit the game1
            
            //do the requested action and display the next view
            done = this.doAction(menuOption);
@@ -48,7 +52,7 @@ public void displayHelpMenuView(){
             System.out.println("\n" + this.helpMenu);
             
             value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leadinga dn trailing blanks
+            value = value.trim(); //trim off leading and trailing blanks
             
             if (value.length() <1) { //value is blank
                 System.out.println("\nInvalid value: value can not be blank");
@@ -64,16 +68,16 @@ public void displayHelpMenuView(){
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
-            case "O": //creat and start new game
+            case "O": //game objective
                 this.gameObjective();
                 break;
-            case "M": //get and start and existing game
+            case "M": //gmae controls
                 this.howToMove();
                 break;
-            case "T": //display the help menu
+            case "T": //display tips
                 this.tips();
                 break;
-            case "R": //save the current game
+            case "R": //return to main menu
                 this.returnTo();
                 break;
             default:

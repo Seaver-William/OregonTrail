@@ -77,7 +77,7 @@ public class RiverCrossingMenuView {
                 break;
         }
             return false;
-                
+    }    
   private void totalCartWeight() {
     
         DisgardWeightMenuView disgardWeightMenu = new DisgardWeightMenuView();

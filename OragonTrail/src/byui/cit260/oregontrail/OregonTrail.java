@@ -5,6 +5,7 @@
  */
 package byui.cit260.oregontrail;
 
+import byui.vit260.oregontrial.view.GameMenuView;
 import byui.vit260.oregontrial.view.StartProgramView;
 
 /**
@@ -25,7 +26,9 @@ public class OregonTrail {
          
          StartProgramView startProgramView = new StartProgramView();
          startProgramView.displayStartProgramView();
-
+         
+         
+         
          
      }
 
