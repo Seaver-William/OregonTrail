@@ -67,13 +67,13 @@ private String getMenuOption1() {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
-            case "S": //game objective
+            case "S": //stay the night
                 this.stayTheNight();
                 break;
-            case "B": //gmae controls
+            case "B": //buy food
                 this.buyFood();
                 break;
-            case "L": //display tips
+            case "L": //look around
                 this.lookAround();
                 break;
             case "E": //return to main menu
