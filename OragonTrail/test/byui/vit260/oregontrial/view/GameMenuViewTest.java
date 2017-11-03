@@ -5,8 +5,6 @@
  */
 package byui.vit260.oregontrial.view;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,14 +16,6 @@ public class GameMenuViewTest {
     
     public GameMenuViewTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
 
     /**
      * Test of displayMenu method, of class GameMenuView.
@@ -36,7 +26,7 @@ public class GameMenuViewTest {
         GameMenuView instance = new GameMenuView();
         instance.displayMenu();
         // TODO review the generated test code and remove the default call to fail.
-      //  fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
