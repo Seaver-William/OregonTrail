@@ -12,23 +12,20 @@ import java.util.Objects;
  *
  * @author Vitor
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     //variables
     private String name;
     private String profession;
-    private Game [] games = new Game[1];
-    private Actor [] actor = new Actor[4];
+    private Game[] games = new Game[1];
+    private Actor[] actor = new Actor[4];
+
     public Player() {
     }
 
     public Player(String profession) {
         this.profession = profession;
     }
-
-    
-    
-    
 
     public Game[] getGames() {
         return games;
@@ -37,8 +34,6 @@ public class Player implements Serializable{
     public void setGames(Game[] games) {
         this.games = games;
     }
-    
-      
 
     public String getName() {
         return name;
@@ -93,8 +88,5 @@ public class Player implements Serializable{
     String getName(String name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
+
 }

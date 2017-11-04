@@ -38,7 +38,7 @@ public class GameMenuView {
             // prompt for and get players input
             String menuOption = this.getMenuOption2();
             if (menuOption.toUpperCase().equals("E")) {
-            
+
                 //user wants to quit else {
                 return; //exit the game
             } //exit the game

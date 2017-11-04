@@ -10,5 +10,5 @@ package byui.vit260.oregontrial.view;
  * @author Ben
  */
 public class DisgardWeightMenuView {
-    
+
 }

@@ -12,17 +12,12 @@ import java.util.Scanner;
  * @author Moose
  */
 class TeamStatus {
-   
 
-
-    
-    
-    
-private String teamStatus;
+    private String teamStatus;
 
     public TeamStatus() {
         this.teamStatus = "\n"
-                + "\n------------------------------------" 
+                + "\n------------------------------------"
                 + "\n*** Everyone is Alive!"
                 + "\nE - Return to Menu"
                 + "\n------------------------------------";
@@ -34,7 +29,7 @@ private String teamStatus;
             // prompt for and get players input
             String menuOption = this.getMenuOption2();
             if (menuOption.toUpperCase().equals("E")) {
-            
+
                 //user wants to quit else {
                 return; //exit the game
             } //exit the game
@@ -84,7 +79,7 @@ private String teamStatus;
 
     private void returnTo() {
         GameMenuView gameMenuView = new GameMenuView();
-                
+
         gameMenuView.displayMenu();
     }
 

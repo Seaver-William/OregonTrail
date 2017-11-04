@@ -13,32 +13,25 @@ import byui.cit260.oregontrail.Player;
  * @author Moose
  */
 public class Gamecontrol {
-    
-    public static Player createPlayer(String name){
-       
-        if (name == null){
+
+    public static Player createPlayer(String name) {
+
+        if (name == null) {
             return null;
         }
-        
-        Player player = new Player();{
-        player.setName(name);
-        
-        OregonTrail.setPlayer(player); //save the player
-        
-        return player;
+
+        Player player = new Player();
+        {
+            player.setName(name);
+
+            OregonTrail.setPlayer(player); //save the player
+
+            return player;
         }
-    }  
+    }
 
     public static void createNewGame(Player player) {
         System.out.println("*** creatNewGame function called ***");
     }
-    
 
-    
-    }
-
-   
-
-        
-    
-
+}

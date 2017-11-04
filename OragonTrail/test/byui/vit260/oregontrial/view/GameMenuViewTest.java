@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author Moose
  */
 public class GameMenuViewTest {
-    
+
     public GameMenuViewTest() {
     }
 
@@ -28,5 +28,5 @@ public class GameMenuViewTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
+
 }

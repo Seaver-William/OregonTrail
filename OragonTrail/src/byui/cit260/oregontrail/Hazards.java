@@ -12,14 +12,13 @@ import java.util.Objects;
  *
  * @author Ben
  */
-public class Hazards implements Serializable{
-    
+public class Hazards implements Serializable {
+
     //variables
     private String weatherCondition;
     private String sickness;
     private String animal;
 
-    
     public String getWeatherCondition() {
         return weatherCondition;
     }
@@ -81,8 +80,5 @@ public class Hazards implements Serializable{
     public String toString() {
         return "Hazards{" + "weatherCondition=" + weatherCondition + ", sickness=" + sickness + ", animal=" + animal + '}';
     }
-    
-    
-    
-    
+
 }

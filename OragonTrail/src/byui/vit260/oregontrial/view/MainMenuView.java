@@ -14,61 +14,64 @@ import java.util.Scanner;
  * @author Moose
  */
 public class MainMenuView {
+
     private String menu;
-    
-    public MainMenuView(){
+
+    public MainMenuView() {
         this.menu = "\n"
-                +"\n------------------------------------"
-                +"\n| Main Menu                        |"
-                +"\n------------------------------------"
-                +"\nN - Start new game"
-                +"\nG - Get and start saved game"
-                +"\nH - Get help on how to play the game"
-                +"\nS - Save game"
-                +"\nQ - Quit"
-                +"\n------------------------------------";
+                + "\n------------------------------------"
+                + "\n| Main Menu                        |"
+                + "\n------------------------------------"
+                + "\nN - Start new game"
+                + "\nG - Get and start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
+                + "\nQ - Quit"
+                + "\n------------------------------------";
     }
-   public void displayMainMenuView(){
-       
-       boolean done = false; // set the flag to done
-       do{
-           // prompt for and get players input
-           String menuOption = this.getMenuOption();
-           if (menuOption.toUpperCase().equals("Q"))//user wants to quit
-               return; //exit the game
-           
-           //do the requested action and display the next view
-           done = this.doAction(menuOption);
-           
-       } while (!done);
-       }
+
+    public void displayMainMenuView() {
+
+        boolean done = false; // set the flag to done
+        do {
+            // prompt for and get players input
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q"))//user wants to quit
+            {
+                return; //exit the game
+            }
+            //do the requested action and display the next view
+            done = this.doAction(menuOption);
+
+        } while (!done);
+    }
 
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
-        
+
         while (!valid) { //loop while an invalid value is entered
             System.out.println("\n" + this.menu);
-            
+
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leadinga dn trailing blanks
-            
-            if (value.length() <1) { //value is blank
+
+            if (value.length() < 1) { //value is blank
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
             }
-            
+
             break; //end the loop
-            }
-           return value; //return the value entered
         }
+        return value; //return the value entered
+    }
 
     public boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase(); //convert choice to upper case
-        
-        switch (choice){
+
+        switch (choice) {
             case "N": //creat and start new game
                 this.startNewGame();
                 break;
@@ -85,44 +88,30 @@ public class MainMenuView {
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
-            return false;
-                
-               
-                
-            
-        }
+        return false;
+
+    }
 
     private void startNewGame() {
         Gamecontrol.createNewGame(OregonTrail.getPlayer());
-    
+
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
-    
+
     }
 
     private void startExistingGame() {
-       System.out.println("*** startExistingGame function called ***"); 
+        System.out.println("*** startExistingGame function called ***");
     }
-        
 
-    
-    
-
-       
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
-        
+
         helpMenuView.displayHelpMenuView();
     }
 
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
-    }
-        
-    
-    
-
-    
-
+}

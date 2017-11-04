@@ -15,14 +15,13 @@ public enum Actor {
     Martha("Martha"),
     Joseph("Joseph"),
     Jack("Jack");
-    
-    
+
     private String name;
 
     private Actor(String name) {
         this.name = name;
     }
-    
+
     public String getname() {
         return name;
     }
@@ -36,26 +35,4 @@ public enum Actor {
         return "Actor{" + "Name=" + name + '}';
     }
 
-    
-    }
-
-    
-        
-        
-    
-
-    
-    
-    
-    
-    
-    
-            
-           
-
-    
-    
-            
-            
-    
-
+}

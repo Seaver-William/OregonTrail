@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Stops implements Serializable {
     //variables
-    
+
     private String obstacle;
     private String traidingPost;
     private String landMark;
@@ -97,6 +97,5 @@ public class Stops implements Serializable {
     public String toString() {
         return "Stops{" + "obstacle=" + obstacle + ", traidingPost=" + traidingPost + ", landMark=" + landMark + ", town=" + town + '}';
     }
-    
-    
+
 }

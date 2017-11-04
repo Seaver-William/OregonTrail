@@ -11,15 +11,14 @@ import java.io.Serializable;
  *
  * @author Vitor
  */
-public class Game  implements Serializable{
-    
+public class Game implements Serializable {
+
     //class variables
     private int totalTime;
     private int numPeople;
     private Player player;
     private Location place;
-    
-    
+
     public Game() {
     }
 
@@ -38,10 +37,7 @@ public class Game  implements Serializable{
     public void setPlace(Location place) {
         this.place = place;
     }
-    
-    
-    
-    
+
     public int getTotalTime() {
         return totalTime;
     }
@@ -58,6 +54,7 @@ public class Game  implements Serializable{
         this.numPeople = numPeople;
     }
 // equals and hash code
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -87,15 +84,10 @@ public class Game  implements Serializable{
         return true;
     }
 // to string
+
     @Override
     public String toString() {
         return "Game{" + "totalTime=" + totalTime + ", numPeople=" + numPeople + '}';
     }
-    
-    
 
-    
- 
-    
-    
 }

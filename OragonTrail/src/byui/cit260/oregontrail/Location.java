@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Vitor
  */
 public class Location implements Serializable {
-    
+
     //variables
     private double millageTotal;
     private double millageEnd;
@@ -28,9 +28,8 @@ public class Location implements Serializable {
 
     public void setStop(Stops stop) {
         this.stop = stop;
-    }   
-  
-    
+    }
+
     public double getMillageTotal() {
         return millageTotal;
     }
@@ -92,7 +91,5 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "millageTotal=" + millageTotal + ", millageEnd=" + millageEnd + ", millageStop=" + millageStop + '}';
     }
-    
-    
-    
+
 }

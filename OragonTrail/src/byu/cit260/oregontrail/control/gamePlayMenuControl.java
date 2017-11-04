@@ -10,5 +10,5 @@ package byu.cit260.oregontrail.control;
  * @author Moose
  */
 public class gamePlayMenuControl {
-    
+
 }

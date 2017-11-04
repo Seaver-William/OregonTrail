@@ -12,62 +12,65 @@ import java.util.Scanner;
  * @author Moose
  */
 public class HelpMenuView {
+
     public String helpMenu;
 
     /**
      *
      */
-    public HelpMenuView(){
+    public HelpMenuView() {
         this.helpMenu = "\n"
-                +"\n------------------------------------"
-                +"\n| Help Menu                        |"
-                +"\n------------------------------------"
-                +"\nO - Game Objective"
-                +"\nM - How to move"
-                +"\nT - Tips"
-                +"\nR - Return"
-                +"\n------------------------------------";
+                + "\n------------------------------------"
+                + "\n| Help Menu                        |"
+                + "\n------------------------------------"
+                + "\nO - Game Objective"
+                + "\nM - How to move"
+                + "\nT - Tips"
+                + "\nR - Return"
+                + "\n------------------------------------";
     }
-public void displayHelpMenuView(){
-    boolean done = false; // set the flag to done
-       do{
-           // prompt for and get players input
-           String menuOption = this.getMenuOption1();
-           if (menuOption.toUpperCase().equals("R"))//user wants to quit
-               return; //exit the game1
-           
-           //do the requested action and display the next view
-           done = this.doAction(menuOption);
-           
-       } while (!done);
-       }
+
+    public void displayHelpMenuView() {
+        boolean done = false; // set the flag to done
+        do {
+            // prompt for and get players input
+            String menuOption = this.getMenuOption1();
+            if (menuOption.toUpperCase().equals("R"))//user wants to quit
+            {
+                return; //exit the game1
+            }
+            //do the requested action and display the next view
+            done = this.doAction(menuOption);
+
+        } while (!done);
+    }
 
     private String getMenuOption1() {
-        
+
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
-        
+
         while (!valid) { //loop while an invalid value is entered
             System.out.println("\n" + this.helpMenu);
-            
+
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
-            
-            if (value.length() <1) { //value is blank
+
+            if (value.length() < 1) { //value is blank
                 System.out.println("\nInvalid value: value can not be blank");
                 continue;
             }
-            
+
             break; //end the loop
-            }
-           return value; //return the value entered
         }
+        return value; //return the value entered
+    }
 
     private boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
-        
-        switch (choice){
+
+        switch (choice) {
             case "O": //game objective
                 this.gameObjective();
                 break;
@@ -84,12 +87,9 @@ public void displayHelpMenuView(){
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
-            return false;
-                
-               
-                
-            
-        }
+        return false;
+
+    }
 
     private void gameObjective() {
         System.out.println("\n*** gameObjective() *** Try again");
@@ -106,11 +106,4 @@ public void displayHelpMenuView(){
     private void returnTo() {
         System.out.println("\n*** returnTo() *** Try again");
     }
-    }
-
-
- 
-    
-
-
-
+}

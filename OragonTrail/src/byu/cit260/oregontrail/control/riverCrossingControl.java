@@ -20,20 +20,21 @@ public class riverCrossingControl {
     public static void viewSurroundings(Player player) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public double dropSupplies(double cartWeight, double suppliesDropped){
 
-        if (cartWeight < 200){
-            return -1;}
-    
-        if (suppliesDropped > cartWeight){
-            return -1;}
-    
-        double totalCartWeight = (cartWeight - suppliesDropped);
-       
-       if (totalCartWeight < 200){
-           return -1;}
-       
-           return totalCartWeight;
+    public double dropSupplies(double cartWeight, double suppliesDropped) {
+    double totalCartWeight = (cartWeight - suppliesDropped);
+        if (cartWeight < 200) {
+            return -1;
+        }
+
+        else if (suppliesDropped > cartWeight) {
+            return -1;
+        }
+
+        else if (totalCartWeight < 200) {
+            return -1;
+        }
+
+        return totalCartWeight;
     }
 }

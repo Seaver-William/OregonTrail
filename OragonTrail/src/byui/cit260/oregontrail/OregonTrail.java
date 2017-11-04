@@ -13,24 +13,21 @@ import byui.vit260.oregontrial.view.StartProgramView;
  * @author Vitor
  */
 public class OregonTrail {
-    
+
     /**
      * The program starts in the main function
+     *
      * @param args the command line arguments
      */
-    
-        private static Game currentGame = null;
-        private static Player player = null;
-    
-     public static void main(String[] args) {
-         
-         StartProgramView startProgramView = new StartProgramView();
-         startProgramView.displayStartProgramView();
-         
-         
-         
-         
-     }
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static void main(String[] args) {
+
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+
+    }
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -47,5 +44,5 @@ public class OregonTrail {
     public static void setPlayer(Player player) {
         OregonTrail.player = player;
     }
-    
+
 }
