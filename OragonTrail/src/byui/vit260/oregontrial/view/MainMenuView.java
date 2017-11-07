@@ -13,12 +13,12 @@ import java.util.Scanner;
  *
  * @author Moose
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private String menu;
+    //private String menu;
 
     public MainMenuView() {
-        this.menu = "\n"
+                super("\n"
                 + "\n------------------------------------"
                 + "\n| Main Menu                        |"
                 + "\n------------------------------------"
@@ -27,46 +27,11 @@ public class MainMenuView {
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
                 + "\nQ - Quit"
-                + "\n------------------------------------";
+                + "\n------------------------------------");
     }
 
-    public void displayMainMenuView() {
 
-        boolean done = false; // set the flag to done
-        do {
-            // prompt for and get players input
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))//user wants to quit
-            {
-                return; //exit the game
-            }
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) { //loop while an invalid value is entered
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leadinga dn trailing blanks
-
-            if (value.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-
-            break; //end the loop
-        }
-        return value; //return the value entered
-    }
-
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -97,7 +62,7 @@ public class MainMenuView {
 
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
 
     }
 
@@ -108,7 +73,7 @@ public class MainMenuView {
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
 
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
 
     private void saveGame() {

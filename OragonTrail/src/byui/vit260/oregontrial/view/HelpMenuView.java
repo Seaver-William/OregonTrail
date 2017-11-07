@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Moose
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
 
     public String helpMenu;
 
@@ -19,7 +19,7 @@ public class HelpMenuView {
      *
      */
     public HelpMenuView() {
-        this.helpMenu = "\n"
+       super("\n"
                 + "\n------------------------------------"
                 + "\n| Help Menu                        |"
                 + "\n------------------------------------"
@@ -27,9 +27,10 @@ public class HelpMenuView {
                 + "\nM - How to move"
                 + "\nT - Tips"
                 + "\nR - Return"
-                + "\n------------------------------------";
+                + "\n------------------------------------");
     }
 
+    /*
     public void displayHelpMenuView() {
         boolean done = false; // set the flag to done
         do {
@@ -65,9 +66,10 @@ public class HelpMenuView {
             break; //end the loop
         }
         return value; //return the value entered
-    }
+    }*/
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {

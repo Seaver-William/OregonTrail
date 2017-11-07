@@ -11,14 +11,14 @@ import java.util.Scanner;
  *
  * @author Theo
  */
-public class HotelMenuView {
+public class HotelMenuView extends View {
      public String hotelMenu;
      
      /**
       * Notes if need be
       */
      public HotelMenuView(){
-         this.hotelMenu = "\n"
+         super("\n"
                 +"\n|-----------------------------------|"
                 +"\n| Hotel Menu                        |"
                 +"\n|-----------------------------------|"
@@ -26,8 +26,9 @@ public class HotelMenuView {
                 +"\n|B - Buy some food                  |"
                 +"\n|L - Look around                    |"
                 +"\n|E - Leave the Hotel                |"
-                +"\n------------------------------------|";
+                +"\n------------------------------------|");
      }
+     /*
 public void displayHotelMenuView() {
     boolean done = false; // set the flag to done
     do{
@@ -61,9 +62,10 @@ private String getMenuOption1() {
             break; //end the loop
             }
            return value; //return the value entered
-        }
-
-    private boolean doAction(String choice) {
+        }*/
+     
+     @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){

@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Moose
  */
-public class RiverCrossingMenuView {
+public class RiverCrossingMenuView extends View {
 
-    private final String menu;
+    /* private final String menu;*/
 
     public RiverCrossingMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n------------------------------------"
                 + "\n| Cross the river                        |"
                 + "\n------------------------------------"
@@ -24,9 +24,9 @@ public class RiverCrossingMenuView {
                 + "\nL - Look around"
                 + "\nD - Drop inventory"
                 + "\nC - Cross the river"
-                + "\n------------------------------------";
+                + "\n------------------------------------");
     }
-
+/*
     public void displayRiverCrossingMenuView() {
 
     }
@@ -54,8 +54,9 @@ public class RiverCrossingMenuView {
             break; //end the loop
         }
         return value; //return the value entered
-    }
+    }*/
 
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case

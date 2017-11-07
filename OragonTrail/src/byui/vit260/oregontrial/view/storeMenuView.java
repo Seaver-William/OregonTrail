@@ -12,11 +12,11 @@ import java.util.Scanner;
  *
  * @author Wilson
  */
-public class storeMenuView {
-    private final String menu;
+public class storeMenuView extends View{
+    //private final String menu;
 
     public storeMenuView(){
-        this.menu = "\n"
+        super("\n"
                 +"\n------------------------------------"
                 +"\n|   Store Menu                      |"
                 +"\n The store sells the following supplies"
@@ -30,8 +30,9 @@ public class storeMenuView {
                 +"\nB - Buy"
                 +"\nS - Sell"
                 +"\nQ - Exit the store"
-                +"\n------------------------------------";
+                +"\n------------------------------------");
     }
+    /*
     public void displaystoreMenuView(){
         
         
@@ -61,7 +62,9 @@ public class storeMenuView {
             }
            return value; //return the value entered
         }
+        */
 
+     @Override
      public boolean doAction(String choice) {
          
          choice = choice.toUpperCase(); //convert choice to upper case

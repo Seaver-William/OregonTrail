@@ -11,63 +11,25 @@ import java.util.Scanner;
  *
  * @author Moose
  */
-class TeamStatus {
+public class TeamStatus extends View {
 
     private String teamStatus;
 
     public TeamStatus() {
-        this.teamStatus = "\n"
+        super("\n"
                 + "\n------------------------------------"
                 + "\n*** Everyone is Alive!"
                 + "\nE - Return to Menu"
-                + "\n------------------------------------";
+                + "\n------------------------------------");
     }
 
-    public void displayMenu() {
-        boolean done = false; // set the flag to done
-        do {
-            // prompt for and get players input
-            String menuOption = this.getMenuOption2();
-            if (menuOption.toUpperCase().equals("E")) {
-
-                //user wants to quit else {
-                return; //exit the game
-            } //exit the game
-            //exit the game
-
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption2() {
-
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) { //loop while an invalid value is entered
-            System.out.println("\n" + this.teamStatus);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leadinga dn trailing blanks
-
-            if (value.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-
-            break; //end the loop
-        }
-        return value; //return the value entered
-    }
-
-    private boolean doAction(String choice) {
+    
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "T": //display team status
+            case "E": //display team status
                 this.returnTo();
                 break;
             default:
@@ -80,7 +42,7 @@ class TeamStatus {
     private void returnTo() {
         GameMenuView gameMenuView = new GameMenuView();
 
-        gameMenuView.displayMenu();
+        gameMenuView.display();
     }
 
 }
