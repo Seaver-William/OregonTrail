@@ -5,20 +5,21 @@
  */
 package byui.vit260.oregontrial.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Moose
  */
-public class HelpMenuView extends View {
+public class HelpMenuView2 extends View {
+    
+
+
 
     public String helpMenu;
 
     /**
      *
      */
-    public HelpMenuView() {
+    public HelpMenuView2() {
        super("\n"
                 + "\n------------------------------------"
                 + "\n| Help Menu                        |"
@@ -30,7 +31,7 @@ public class HelpMenuView extends View {
                 + "\n------------------------------------");
     }
 
- 
+  
 
     @Override
     public boolean doAction(String choice) {
@@ -70,8 +71,8 @@ public class HelpMenuView extends View {
     }
 
     private void returnTo() {
-        MainMenuView mainMenuView = new MainMenuView();
+        GameMenuView gameMenuView = new GameMenuView();
 
-        mainMenuView.display();
+        gameMenuView.display();
     }
 }

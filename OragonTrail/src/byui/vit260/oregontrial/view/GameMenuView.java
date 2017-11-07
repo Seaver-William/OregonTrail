@@ -98,9 +98,9 @@ public class GameMenuView extends View {
     }
 
     private void helpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
+        HelpMenuView2 helpMenuView2 = new HelpMenuView2();
 
-        helpMenuView.display();
+        helpMenuView2.display();
     }
 
 }
