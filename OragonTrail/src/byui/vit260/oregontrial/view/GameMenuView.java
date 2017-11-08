@@ -28,11 +28,14 @@ public class GameMenuView extends View {
                 + "\nV - View the map"
                 + "\nH - Help Menu"
                 + "\nM - Main Menu"
-                + "\nE - Exit Menu"
                 + "\n------------------------------------");
     }
 
-    
+    /**
+     *
+     * @param choice
+     * @return
+     */
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -78,7 +81,9 @@ public class GameMenuView extends View {
     }
 
     private void setPace() {
-        System.out.println("\n*** gameObjective() *** Try again");
+        SetPace setPace = new SetPace();
+        
+        setPace.display();
     }
 
     private void sceneMenu() {
