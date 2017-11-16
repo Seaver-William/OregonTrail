@@ -30,8 +30,31 @@ public class Gamecontrol {
         }
     }
 
-    public static void createNewGame(Player player) {
-        System.out.println("*** creatNewGame function called ***");
+    public static int createNewGame(Player player) {
+        if (player == null){return -1;}
+        /*
+        game = create a new Game object
+        Save a reference to the Player object in the game
+        Save a reference to the game in the main class
+        
+        Actors[] actor = createActors[];
+        Save the list of actors in the Game object
+        Assign an actor to the player
+        
+        Items[] items = createItems()
+        Save the list of items in the game
+        
+        map = createMap(noOfRows, noOfColumns)
+        IF map == null THEN
+            RETURN -1
+        ENDIF
+        
+        Assign the map to the game 
+        
+        */
+        
+        return 1;
+        
     }
 
 }
