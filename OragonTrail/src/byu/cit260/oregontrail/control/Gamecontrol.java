@@ -5,6 +5,8 @@
  */
 package byu.cit260.oregontrail.control;
 
+import byui.cit260.oregontrail.Actor;
+import byui.cit260.oregontrail.Game;
 import byui.cit260.oregontrail.OregonTrail;
 import byui.cit260.oregontrail.Player;
 
@@ -32,29 +34,36 @@ public class Gamecontrol {
 
     public static int createNewGame(Player player) {
         if (player == null){return -1;}
-        /*
-        game = create a new Game object
-        Save a reference to the Player object in the game
-        Save a reference to the game in the main class
         
-        Actors[] actor = createActors[];
-        Save the list of actors in the Game object
-        Assign an actor to the player
+        Game game = new Game();
+                
+        game.setPlayer(player);
+        game.SaveGame(game);//Save a reference to the game in the main class
         
-        Items[] items = createItems()
+        
+        Actor actor;
+        
+        actor = Actor();
+        actor.setname();
+        game.getPlayer();
+        
+        Items[] items = createItems();
         Save the list of items in the game
-        
+                
+                /*
         map = createMap(noOfRows, noOfColumns)
         IF map == null THEN
-            RETURN -1
+        RETURN -1
         ENDIF
-        
-        Assign the map to the game 
-        
-        */
+        Assign the map to the game
+         */
         
         return 1;
         
+    }
+
+    private static Actor Actor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

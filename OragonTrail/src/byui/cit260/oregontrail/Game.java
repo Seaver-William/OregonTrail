@@ -19,7 +19,7 @@ public class Game implements Serializable {
     private Player player;
     private Location place;
 
-    public Game() {
+    public void Game() {
     }
 
     public Player getPlayer() {
@@ -88,6 +88,10 @@ public class Game implements Serializable {
     @Override
     public String toString() {
         return "Game{" + "totalTime=" + totalTime + ", numPeople=" + numPeople + '}';
+    }
+
+    public void SaveGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

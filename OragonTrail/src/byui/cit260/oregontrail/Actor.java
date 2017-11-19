@@ -35,4 +35,12 @@ public enum Actor {
         return "Actor{" + "Name=" + name + '}';
     }
 
+    public void saveActor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setname() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

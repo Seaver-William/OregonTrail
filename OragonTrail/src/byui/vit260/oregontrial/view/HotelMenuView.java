@@ -23,7 +23,7 @@ public class HotelMenuView extends View {
                 +"\n| Hotel Menu                        |"
                 +"\n|-----------------------------------|"
                 +"\n|S - Stay the night                 |"
-                +"\n|B - Buy some food                  |"
+                +"\n|B - Buy some supplies              |"
                 +"\n|L - Look around                    |"
                 +"\n|E - Leave the Hotel                |"
                 +"\n------------------------------------|");
