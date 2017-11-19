@@ -48,15 +48,14 @@ public class Gamecontrol {
         game.getPlayer();
         
         Items[] items = createItems();
-        Save the list of items in the game
-                
-                /*
-        map = createMap(noOfRows, noOfColumns)
-        IF map == null THEN
-        RETURN -1
-        ENDIF
-        Assign the map to the game
-         */
+        //Save the list of items in the game
+        
+        Gamecontrol map = createMap(noOfRows, noOfColumns);
+        if(map == null){  //map == null THEN
+        return -1;
+                } end if {
+                    game.setMap(map);
+                }
         
         return 1;
         

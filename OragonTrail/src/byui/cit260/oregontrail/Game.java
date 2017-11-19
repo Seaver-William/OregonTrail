@@ -5,6 +5,7 @@
  */
 package byui.cit260.oregontrail;
 
+import byu.cit260.oregontrail.control.Gamecontrol;
 import java.io.Serializable;
 
 /**
@@ -91,6 +92,10 @@ public class Game implements Serializable {
     }
 
     public void SaveGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setMap(Gamecontrol map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

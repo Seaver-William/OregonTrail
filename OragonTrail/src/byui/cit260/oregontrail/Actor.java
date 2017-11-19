@@ -42,5 +42,21 @@ public enum Actor {
     public void setname() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    //Array of Actors
+    String[] Actors = {
+        "Bat Masterson",
+        "Belle Starr",
+        "Big Jim Courtright",
+        "Oliver Loving",
+        "Pat Garrett",
+        "StagecoachMary",
+        "Ruth Roach",
+        "Texas JohnSlaughter"   
+    };
+    
+   
 
-}
+
+    }
+
