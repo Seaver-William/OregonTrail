@@ -18,8 +18,22 @@ public class Location implements Serializable {
     private double millageEnd;
     private double millageStop;
     private Stops stop;
-
+    private String name;
+    
     public Location() {
+    }
+    
+    public Location(String name)
+    {
+        setName(name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Stops getStop() {

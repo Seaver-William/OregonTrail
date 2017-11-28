@@ -5,51 +5,27 @@
  */
 package byu.cit260.oregontrail.control;
 
+import byui.cit260.oregontrail.Location;
+import byui.cit260.oregontrail.Map;
+
 /**
  *
  * @author Moose
  */
 public class MapControl {
 
- public static Map createMap( int noOfRows,int noOfColumns);  
- 
-    if noOfRows < 0 OR numOfColumns < 0;
-    return null;
- endif
- if items is null OR its length is < 1
- RETURN null
- endif
-Map map = new Map object
-save the noOfRows in the map
-save the noOfColumns in the map
-locations = createLocations(noOfRows, noOfColumns)
-Assign the locations array to the map
-scenes = createScenes()
-questions = createQuestions()
-assignQuestionsToScenes()
-assignItemsToScenes() 
+    public static Map createMap() {
+        Map map = new Map();
+        Location[] locations = new Location[5];
         
-
-   private static Location[][] createLocations(int rows,int columns);
-
-   private static Scene[] createScenes();
-private static Question[] createQuestions();
-private static void assignQuestionsToScenes(Question[] questions,
- Scene[] scenes)
-private static void assignItemsToScenes(InventoryItem[] items,
- Scene[] scenes)
-private static void assignScenesToLocations(
- Scene[] scenes,
- Location[][] locations)
-
-        }
-    
-
-   
-
-       
-     
-
-    
+        locations[0] = new Location("Independence, Missouri");
+        locations[1] = new Location("Grand Canyon");
+        locations[2] = new Location("Grand Junction Colorado");
+        locations[3] = new Location("San Fransisco");
+        locations[4] = new Location("Seattle Washington");
+        
+        map.setLocations(locations);
+        
+        return map;
     }
-    
+}

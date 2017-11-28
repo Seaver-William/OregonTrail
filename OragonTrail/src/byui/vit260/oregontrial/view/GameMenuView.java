@@ -6,6 +6,10 @@
  */
 package byui.vit260.oregontrial.view;
 
+import byui.cit260.oregontrail.Game;
+import byui.cit260.oregontrail.Location;
+import byui.cit260.oregontrail.Map;
+import byui.cit260.oregontrail.OregonTrail;
 import java.util.Scanner;
 
 /**
@@ -82,7 +86,7 @@ public class GameMenuView extends View {
 
     private void setPace() {
         SetPace setPace = new SetPace();
-        
+
         setPace.display();
     }
 
@@ -91,7 +95,17 @@ public class GameMenuView extends View {
     }
 
     private void viewMap() {
-        System.out.println("\n*** gameObjective() *** Try again");
+        Game game = OregonTrail.getCurrentGame();
+        Map map = game.getMap();
+        Location[] locations = map.getLocations();
+
+        for (int i = 0; i < locations.length; i++) {
+            System.out.println(locations[i].getName());
+        }
+
+        //for (Location location : locations) {
+        //    System.out.println(location.getName());
+        //}
     }
 
     private void mainMenu() {
@@ -108,4 +122,7 @@ public class GameMenuView extends View {
         helpMenuView2.display();
     }
 
+    
+    
+   
 }

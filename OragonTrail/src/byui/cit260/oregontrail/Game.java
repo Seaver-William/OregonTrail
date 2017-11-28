@@ -7,6 +7,7 @@ package byui.cit260.oregontrail;
 
 import byu.cit260.oregontrail.control.Gamecontrol;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -18,7 +19,17 @@ public class Game implements Serializable {
     private int totalTime;
     private int numPeople;
     private Player player;
-    private Location place;
+    private List<Actor> teamMembers;
+    private List<Inventory> currentSupplies;
+    private Map map;
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
 
     public void Game() {
     }
@@ -31,13 +42,8 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public Location getPlace() {
-        return place;
-    }
-
-    public void setPlace(Location place) {
-        this.place = place;
-    }
+    
+    
 
     public int getTotalTime() {
         return totalTime;

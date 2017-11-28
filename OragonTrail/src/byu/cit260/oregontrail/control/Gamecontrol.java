@@ -7,6 +7,7 @@ package byu.cit260.oregontrail.control;
 
 import byui.cit260.oregontrail.Actor;
 import byui.cit260.oregontrail.Game;
+import byui.cit260.oregontrail.Map;
 import byui.cit260.oregontrail.OregonTrail;
 import byui.cit260.oregontrail.Player;
 
@@ -33,47 +34,47 @@ public class Gamecontrol {
     }
 
     public static int createNewGame(Player player) {
-        if (player == null){return -1;}
-        
+        if (player == null) {
+            return -1;
+        }
+
         Game game = new Game();
-                
+
         game.setPlayer(player);
         OregonTrail.setCurrentGame(game);//Save a reference to the game in the main class
+       
+
+        Map map = MapControl.createMap();
+        game.setMap(map);
         return 1;
         
+        
+
         /**
-        Actor actor;
-        
-        actor = Actor();
-        actor.setname();
-        game.getPlayer();
-        
-        
-        Items[] items = createItems();
-        //Save the list of items in the game
-        
-        /**
-        Gamecontrol map = createMap(noOfRows, noOfColumns);
-        if(map == null){  //map == null THEN
-        return -1;
-                } end if {
-                    game.setMap(map);
-                }
-        
-        return 1;
-        
+         * Actor actor;
+         *
+         * actor = Actor(); actor.setname(); game.getPlayer();
+         *
+         *
+         * Items[] items = createItems(); //Save the list of items in the game
+         *
+         * /**
+         * Gamecontrol map = createMap(noOfRows, noOfColumns); if(map == null){
+         * //map == null THEN return -1; } end if { game.setMap(map); }
+         *
+         * return 1;
+         *
+         * }
+         *
+         *
+         * }
+         *
+         * public Gamecontrol() { }
+         *
+         * private static Actor Actor() { throw new
+         * UnsupportedOperationException("Not supported yet."); //To change body
+         * of generated methods, choose Tools | Templates. }
+*
+         */
     }
-
-   
-    }
-
-    public Gamecontrol() {
-    }
-
-    private static Actor Actor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-**/
-
-}
 }
