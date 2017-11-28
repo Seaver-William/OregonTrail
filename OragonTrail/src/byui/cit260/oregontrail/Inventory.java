@@ -14,7 +14,27 @@ import java.util.Objects;
  */
 public class Inventory implements Serializable {
 
-    //variables
+    private Object inventoryType;
+    private Object qualityAvail;
+
+    public enum Items {
+    Food("Food"),
+    Rifle("Rifle"),
+    Ammunition("Ammunition"),
+    Clothing("Clothing"),
+    WagonWheel("Wagon Wheel");
+    
+    private String item;
+
+    private Items(String item) {
+        this.item = item;
+    }
+
+    public String getitem() {
+        return item;
+    }
+
+//variables
     private String inventoryType;
     private String qualityAvail;
 
@@ -34,19 +54,24 @@ public class Inventory implements Serializable {
         this.qualityAvail = qualityAvail;
     }
 
-    public Inventory() {
+    Items() {
     }
 
-    @Override
-    public int hashCode() {
+   // @Override
+   /** public int hashCode() {
         int hash = 7;
         hash = 23 * hash + Objects.hashCode(this.inventoryType);
         hash = 23 * hash + Objects.hashCode(this.qualityAvail);
         return hash;
     }
 
-    @Override
-    public boolean equals(Object obj) {
+        /**
+         *
+         * @param obj
+         * @return
+         */
+      // @Override
+   /** public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -70,5 +95,7 @@ public class Inventory implements Serializable {
     public String toString() {
         return "Inventory{" + "inventoryType=" + inventoryType + ", qualityAvail=" + qualityAvail + '}';
     }
-
+    **/
+    }
 }
+

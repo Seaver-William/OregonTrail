@@ -38,18 +38,21 @@ public class Gamecontrol {
         Game game = new Game();
                 
         game.setPlayer(player);
-        game.SaveGame(game);//Save a reference to the game in the main class
+        OregonTrail.setCurrentGame(game);//Save a reference to the game in the main class
+        return 1;
         
-        
+        /**
         Actor actor;
         
         actor = Actor();
         actor.setname();
         game.getPlayer();
         
+        
         Items[] items = createItems();
         //Save the list of items in the game
         
+        /**
         Gamecontrol map = createMap(noOfRows, noOfColumns);
         if(map == null){  //map == null THEN
         return -1;
@@ -61,8 +64,16 @@ public class Gamecontrol {
         
     }
 
+   
+    }
+
+    public Gamecontrol() {
+    }
+
     private static Actor Actor() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+**/
 
+}
 }

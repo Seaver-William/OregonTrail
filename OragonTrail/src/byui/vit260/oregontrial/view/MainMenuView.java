@@ -76,7 +76,7 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
-    private void saveGame() {
+    public void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
 }

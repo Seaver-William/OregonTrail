@@ -42,7 +42,7 @@ public enum Actor {
     public void setname() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    /**
     //Array of Actors
     String[] Actors = {
         "Bat Masterson",
@@ -53,7 +53,7 @@ public enum Actor {
         "StagecoachMary",
         "Ruth Roach",
         "Texas JohnSlaughter"   
-    };
+    };**/
     
    
 

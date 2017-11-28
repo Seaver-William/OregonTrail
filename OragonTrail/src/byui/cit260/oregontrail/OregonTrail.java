@@ -17,9 +17,8 @@ public class OregonTrail {
     /**
      * The program starts in the main function
      *
-     * @param args the command line arguments
      */
-    private static Game currentGame = null;
+    public static Game currentGame = null;
     private static Player player = null;
 
     public static void main(String[] args) {
@@ -29,6 +28,10 @@ public class OregonTrail {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -43,6 +46,10 @@ public class OregonTrail {
 
     public static void setPlayer(Player player) {
         OregonTrail.player = player;
+    }
+
+    public static void currentGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

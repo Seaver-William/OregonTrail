@@ -91,7 +91,7 @@ public class Game implements Serializable {
         return "Game{" + "totalTime=" + totalTime + ", numPeople=" + numPeople + '}';
     }
 
-    public void SaveGame(Game game) {
+    public void saveGame(Game game) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
