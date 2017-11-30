@@ -6,6 +6,7 @@
 package byu.cit260.oregontrail.control;
 
 import byui.cit260.oregontrail.Player;
+import byui.cit260.oregontrail.exceptions.RiverCrossingControlException;
 
 /**
  *
@@ -21,20 +22,20 @@ public class riverCrossingControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public double dropSupplies(double cartWeight, double suppliesDropped) {
+    public double dropSupplies(double cartWeight, double suppliesDropped) throws RiverCrossingControlException {
     double totalCartWeight = (cartWeight - suppliesDropped);
         if (cartWeight < 200) {
-            return -1;
+            throw new RiverCrossingControlException("minimum weight can not be less than 200 pounds");
         }
 
-        else if (suppliesDropped > cartWeight) {
-            return -1;
+       /** else if (suppliesDropped > cartWeight) {
+            //return -1;
         }
 
         else if (totalCartWeight < 200) {
             return -1;
         }
-
+**/
         return totalCartWeight;
     }
 }

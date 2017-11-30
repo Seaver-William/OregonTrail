@@ -9,25 +9,26 @@ package byui.cit260.oregontrail.exceptions;
  *
  * @author Moose
  */
-public class helpMenuControlException extends Exception {
+public class RiverCrossingControlException extends Exception {
 
-    public helpMenuControlException() {
+    public RiverCrossingControlException() {
     }
 
-    public helpMenuControlException(String string) {
+    public RiverCrossingControlException(String string) {
         super(string);
     }
 
-    public helpMenuControlException(String string, Throwable thrwbl) {
+    public RiverCrossingControlException(String string, Throwable thrwbl) {
         super(string, thrwbl);
     }
 
-    public helpMenuControlException(Throwable thrwbl) {
+    public RiverCrossingControlException(Throwable thrwbl) {
         super(thrwbl);
     }
 
-    public helpMenuControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
+    public RiverCrossingControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
+    
     
 }
