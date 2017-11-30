@@ -5,7 +5,7 @@
  */
 package byui.vit260.oregontrial.view;
 
-import byu.cit260.oregontrail.control.Gamecontrol;
+import byu.cit260.oregontrail.control.GameControl;
 import byui.cit260.oregontrail.Player;
 import java.util.Scanner;
 
@@ -65,7 +65,7 @@ public class StartProgramView {
             value = value.trim(); //trim off leadinga dn trailing blanks
 
             if (value.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),"aInvalid value: value can not be blank");
                 continue;
             }
 
@@ -83,7 +83,7 @@ public class StartProgramView {
         }
 
         // call createPlayer() control function
-        Player player = Gamecontrol.createPlayer(playersName);
+        Player player = GameControl.createPlayer(playersName);
 
         if (player == null) { //if unsuccessful
             System.out.println("\nError creating the player.");

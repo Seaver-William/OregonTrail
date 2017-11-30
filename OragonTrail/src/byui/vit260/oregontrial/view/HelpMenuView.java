@@ -50,7 +50,7 @@ public class HelpMenuView extends View {
                 this.returnTo();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+               ErrorView.display(this.getClass().getName(),"*** Invalid selection *** Try again");
                 break;
         }
         return false;

@@ -5,7 +5,7 @@
  */
 package byui.vit260.oregontrial.view;
 
-import byu.cit260.oregontrail.control.Gamecontrol;
+import byu.cit260.oregontrail.control.GameControl;
 import byui.cit260.oregontrail.OregonTrail;
 import java.util.Scanner;
 
@@ -50,7 +50,7 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),"*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -58,7 +58,7 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        Gamecontrol.createNewGame(OregonTrail.getPlayer());
+        GameControl.createNewGame(OregonTrail.getPlayer());
 
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
@@ -67,7 +67,19 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+        this.console.println("\n\nEnter the file path for file where the game is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {
@@ -76,7 +88,15 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
-    public void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void saveGame() {
+        this.console.println("\n\nEnter the file path for the file where the game is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            //saveGame
+            GameControl.saveGame(OregonTrail.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 }
