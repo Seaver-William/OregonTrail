@@ -1,4 +1,3 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -91,7 +90,9 @@ public class GameMenuView extends View {
     }
 
     private void sceneMenu() {
-        System.out.println("\n*** gameObjective() *** Try again");
+        HotelMenuView hotelMenuView = new HotelMenuView();
+        
+        hotelMenuView.display();
     }
 
     private void viewMap() {
@@ -122,7 +123,5 @@ public class GameMenuView extends View {
         helpMenuView2.display();
     }
 
-    
-    
-   
 }
+

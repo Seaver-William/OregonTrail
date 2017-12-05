@@ -31,6 +31,7 @@ public class OregonTrail {
     private static BufferedReader inFile = null;
 
     private static PrintWriter logFile = null;
+    public static OregonTrail getHotelTunes;
 
     public static void main(String[] args) {
 
@@ -119,5 +120,22 @@ public class OregonTrail {
     public static void setLogFile(PrintWriter logFile) {
         OregonTrail.logFile = logFile;
     }
+
+    public static void getHotelTunes() {
+        System.out.print("\n" +
+                "Who is the tall, dark stranger there? \n" +
+                "Maverick is the name. \n" +
+                "Ridin' the trail to who knows where, \n" +
+                "Luck is his companion, \n" +
+                "Gamblin' is his game. \n" +
+                "Smooth as the handle on a gun. \n" +
+                "Maverick is the name. \n" +
+                "Wild as the wind in Oregon, \n" +
+                "Blowin' up a canyon, \n" +
+                "Easier to tame. \n"
+);
+    }
+
+    
 
 }
