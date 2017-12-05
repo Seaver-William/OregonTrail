@@ -9,6 +9,8 @@ import byu.cit260.oregontrail.control.GameControl;
 import byui.cit260.oregontrail.Game;
 import byui.cit260.oregontrail.OregonTrail;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -72,27 +74,32 @@ private String getMenuOption1() {
 
     @Override
     public boolean doAction(String choice) {
-        choice = choice.toUpperCase(); //convert choice to upper case
-
-        switch (choice) {
-            case "S": //stay the night
-                this.stayTheNight();
-                break;
-            case "B": //buy food
-                this.buyFood();
-                break;
-            case "L": //look around
-                this.lookAround();
-                break;
-            case "E": //return to main menu
-                this.leaveHotel();
-                break;
-            case "R": //return to main menu
-                this.hotelTunes();
-                break;
-            default:
-                ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
-                break;
+        try {
+            choice = choice.toUpperCase(); //convert choice to upper case
+            
+            switch (choice) {
+                case "S": //stay the night
+                    this.stayTheNight();
+                    break;
+                case "B": //buy food
+                    this.buyFood();
+                    break;
+                case "L": //look around
+                    this.lookAround();
+                    break;
+                case "E": //return to main menu
+                    this.leaveHotel();
+                    break;
+                case "R": //return to main menu
+                    this.hotelTunes();
+                    break;
+                default:
+                    ErrorView.display(this.getClass().getName(), "*** Invalid selection *** Try again");
+                    break;
+            }
+            return false;
+        } catch (GameControl.GameControlException ex) {
+            Logger.getLogger(HotelMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
 
@@ -114,7 +121,7 @@ private String getMenuOption1() {
         System.out.println("\n*** leaveHotel() *** Try again");
     }
 
-    private void hotelTunes() {
+    private void hotelTunes() throws GameControl.GameControlException {
         
         this.console.println("\n\nEnter the file path for the file where the Lyrics is to be saved.");
         String filePath = this.getInput();
