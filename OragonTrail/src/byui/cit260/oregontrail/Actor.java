@@ -14,7 +14,7 @@ public enum Actor {
     Patti("patti"),
     Martha("Martha"),
     Joseph("Joseph"),
-    Jack("Jack");
+    Jack("Jack"), ;
 
     private String name;
 
