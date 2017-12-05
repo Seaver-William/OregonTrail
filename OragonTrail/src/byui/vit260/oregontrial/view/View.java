@@ -51,7 +51,7 @@ public abstract class View implements ViewInterface {
       
       public String getInput() {
           
-       // Scanner keyboard = new Scanner(System.in);get infile for keyboard
+        //Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         String value = null; //value to be returned
         boolean valid = false; //initialize to not valid
 

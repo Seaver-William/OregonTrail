@@ -20,6 +20,7 @@ public class TeamStatus extends View {
                 + "\n------------------------------------"
                 + "\n*** Everyone is Alive!"
                 + "\nE - Return to Menu"
+                + "\nP - Print team status to file"
                 + "\n------------------------------------");
     }
 
