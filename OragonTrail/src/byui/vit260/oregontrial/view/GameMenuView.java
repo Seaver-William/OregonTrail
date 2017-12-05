@@ -91,9 +91,7 @@ public class GameMenuView extends View {
     }
 
     private void sceneMenu() {
-        HotelMenuView hotelMenuView = new HotelMenuView();
-        
-        hotelMenuView.display();
+        System.out.println("\n*** gameObjective() *** Try again");
     }
 
     private void viewMap() {
@@ -124,4 +122,7 @@ public class GameMenuView extends View {
         helpMenuView2.display();
     }
 
+    
+    
+   
 }

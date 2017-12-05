@@ -88,17 +88,14 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
-    public void saveGame() {
-        
-        
+    private void saveGame() {
         this.console.println("\n\nEnter the file path for the file where the game is to be saved.");
         String filePath = this.getInput();
         
         try {
             //saveGame
-        GameControl.saveGame(OregonTrail.getCurrentGame(), filePath);
-        
-        } catch (GameControl.GameControlException ex) {
+            GameControl.saveGame(OregonTrail.getCurrentGame(), filePath);
+        } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
