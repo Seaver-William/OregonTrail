@@ -116,15 +116,31 @@ public class GameControl {
         }
         OregonTrail.setCurrentGame(game);
     }
+
+    
     
 
-    private static class GameControlException extends Exception {
+    public static class GameControlException extends Exception {
 
         public GameControlException() {
         }
 
         public GameControlException(String message) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+    
+    
+    public static void saveHotelLyrics(OregonTrail hotelTunes, String filePath) 
+            throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(hotelTunes);
+    }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
         }
     }
 }
