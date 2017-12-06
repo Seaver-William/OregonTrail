@@ -19,7 +19,7 @@ public class Game implements Serializable {
     private int totalTime;
     private int numPeople;
     private Player player;
-    private Team team;
+    private Enum<Actor> teamMembers;
     private List<Inventory> currentSupplies;
     private Map map;
     
@@ -32,18 +32,8 @@ public class Game implements Serializable {
         this.map = map;
     }
     
-    /**
-     *
-     * @return
-     */
-    public Team getTeam(){
-        return team;
-    }
-        
-    public void setTeam(Team team){
-        this.team = team;
-        
-    
+    public Enum getActors(){
+        return teamMembers;
     }
 
     public void Game() {
