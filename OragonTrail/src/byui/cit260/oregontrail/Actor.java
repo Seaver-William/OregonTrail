@@ -5,24 +5,32 @@
  */
 package byui.cit260.oregontrail;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Moose
  */
-public enum Actor {
-    Frank("Frank"),
-    Patti("patti"),
-    Martha("Martha"),
-    Joseph("Joseph"),
-    Jack("Jack"), ;
+public class Actor implements Serializable{
+
+   
 
     private String name;
+//*public enum Actor {
+   // Frank("Frank"),
+   // Patti("patti"),
+   // Martha("Martha"),
+   // Joseph("Joseph"),
+   // Jack("Jack"), ;
 
-    private Actor(String name) {
+
+   // private String name;
+
+    public Actor(String name) {
         this.name = name;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
@@ -42,6 +50,10 @@ public enum Actor {
     public void setname() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   // public boolean getName() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /**
     //Array of Actors
     String[] Actors = {
@@ -58,5 +70,5 @@ public enum Actor {
    
 
 
-    }
+    
 

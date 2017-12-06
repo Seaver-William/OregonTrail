@@ -8,6 +8,8 @@ package byui.vit260.oregontrial.view;
 import byu.cit260.oregontrail.control.GameControl;
 import byui.cit260.oregontrail.Actor;
 import byui.cit260.oregontrail.Game;
+import byui.cit260.oregontrail.OregonTrail;
+import byui.cit260.oregontrail.Team;
 import java.io.FileWriter;
 import static java.lang.System.console;
 import java.util.Scanner;
@@ -23,7 +25,7 @@ public class TeamStatus extends View {
     public TeamStatus() {
         super("\n"
                 + "\n------------------------------------"
-                + "\n*** Everyone is Alive!"
+                + "\nV -  View Team"
                 + "\nE - Return to Menu"
                 + "\nP - Print team status to file"
                 + "\n------------------------------------");
@@ -34,7 +36,10 @@ public class TeamStatus extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "E": //display team status
+            case "V"://display team status
+                this.viewActors();
+                break;
+            case "E": //return to menu
                 this.returnTo();
                 break;
             case "P": //Print a team list to file
@@ -59,19 +64,19 @@ public class TeamStatus extends View {
 
         try {
             //saveGame
-            GameControl.printTeam(Actor., filePath);
+            GameControl.printTeam( filePath);
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
 
     public void viewActors() {
-        Enum actor = Game.getActors();
-        Actor actors = Game.getActors();
-        Actor[] actor = Game.getActors();
+        Game game = OregonTrail.getCurrentGame();
+        Team team = game.getTeam();
+        Actor[] actor = team.getActor();
 
-        for (int i = 0; i < Actor.length; i++) {
-            System.out.println(actor[i].getActors());
+        for (int i = 0; i < actor.length; i++) {
+            System.out.println(actor[i].getName());
         }
 
         //for (Location location : locations) {
